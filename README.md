@@ -57,3 +57,50 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## Project Rules and Guidelines
+
+### Code Style
+- Follow the [Angular Style Guide](https://angular.io/guide/styleguide)
+- Use consistent indentation (2 spaces)
+- Write meaningful comments and documentation
+- Keep components small and focused
+- Use TypeScript's strict mode
+
+### Git Workflow
+- Create feature branches from `develop`
+- Use meaningful commit messages following conventional commits
+- Keep commits atomic and focused
+- Create pull requests for code review
+- Squash commits before merging
+
+### Testing Requirements
+- Write unit tests for new features
+- Maintain minimum 80% code coverage
+- Test edge cases and error scenarios
+- Update tests when modifying existing features
+
+### Performance Guidelines
+- Lazy load modules when possible
+- Optimize images and assets
+- Follow Angular best practices for change detection
+- Minimize bundle size
+
+### Code Review Process
+- All code must be reviewed before merging
+- Address reviewer comments promptly
+- Test changes locally before requesting review
+- Ensure CI/CD pipeline passes
+
+### Documentation
+- Update README.md for significant changes
+- Document complex logic and business rules
+- Keep API documentation current
+- Include setup instructions for new features
+
+### Dependencies
+- Keep dependencies updated
+- Review security vulnerabilities regularly
+- Document third-party library usage
+- Avoid unnecessary dependencies
