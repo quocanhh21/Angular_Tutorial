@@ -1,0 +1,26 @@
+<div class="learning-container">
+    <h2 class="learning-title">📚 Learning Modules</h2>
+  
+    <div class="lesson-list">
+      <div class="lesson-card" *ngFor="let lesson of lessons">
+        <h3 class="lesson-title">{{ lesson.title }}</h3>
+        <p class="lesson-description">{{ lesson.description }}</p>
+        
+        <button 
+          class="start-btn" 
+          [disabled]="lesson.completed" 
+          (click)="completeLesson(lesson)">
+          {{ lesson.completed ? '✅ Completed' : 'Start Learning' }}
+        </button>
+      </div>
+    </div>
+  
+    <div class="progress-card">
+      <h3>📊 Your Progress</h3>
+      <p>Lessons Completed: <strong>{{ completedLessons }} / {{ lessons.length }}</strong></p>
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width]="progressPercentage + '%'"></div>
+      </div>
+    </div>
+  </div>
+  

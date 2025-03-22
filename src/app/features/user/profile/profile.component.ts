@@ -3,12 +3,15 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-user-header',
+  selector: 'app-profile',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './user-header.component.html',
-  styleUrl: './user-header.component.scss'
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss'] 
 })
-export class UserHeaderComponent {
-
+export class ProfileComponent {
+  user = {
+    name: 'John Doe',
+    email: 'john.doe@example.com'
+  };
 }
