@@ -1,15 +1,27 @@
-<header class="user-header">
-    <div class="logo">
-      <a routerLink="/">My Learning App</a>
-    </div>
-    <nav>
-      <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/dashboard">Dashboard</a></li>
-        <li><a routerLink="/tests">Tests</a></li>
-        <li><a routerLink="/learning">Learning</a></li>
-        <li><a routerLink="/profile">Profile</a></li>
-      </ul>
-    </nav>
-  </header>
-  
+<header class="user-header flex justify-between items-center p-4 bg-gray-800 text-white shadow-md">
+  <!-- Logo -->
+  <div class="logo text-xl font-bold">
+    <a routerLink="/">My Learning App</a>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <ul class="flex gap-4">
+      <li><a routerLink="/" class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md transition hover:bg-blue-600">Home</a></li>
+      <li>
+        <a [routerLink]="['/dashboard']"
+        class="bg-green-500 text-white px-4 py-2 rounded-md shadow-md transition hover:bg-green-600">
+          Go to Dashboard
+        </a>
+      </li>
+      <li><a routerLink="/tests" class="bg-green-500 text-white px-4 py-2 rounded-md shadow-md transition hover:bg-green-600">Tests</a></li>
+      <li><a routerLink="/learning"  class="bg-green-500 text-white px-4 py-2 rounded-md shadow-md transition hover:bg-green-600">Learning</a></li>
+      <li>
+        <a [routerLink]="['/profile']"
+           class="bg-green-500 text-white px-4 py-2 rounded-md shadow-md transition hover:bg-green-600">
+          Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

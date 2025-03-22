@@ -1,0 +1,24 @@
+<div class="test-container">
+    <h2 class="test-title">Take a Test</h2>
+  
+    <form (ngSubmit)="submitTest()">
+      <div class="question-card" *ngFor="let question of questions; let i = index">
+        <p class="question">{{ i + 1 }}. {{ question.text }}</p>
+        
+        <div class="options">
+          <label *ngFor="let option of question.options">
+            <input type="radio" name="question{{i}}" [value]="option" [(ngModel)]="question.selectedAnswer">
+            {{ option }}
+          </label>
+        </div>
+      </div>
+  
+      <button type="submit" class="submit-btn">Submit Test</button>
+    </form>
+  
+    <div *ngIf="submitted" class="result-card">
+      <h3>🎉 Test Completed!</h3>
+      <p>You scored: <span class="score">{{ points }} points</span></p>
+    </div>
+  </div>
+  

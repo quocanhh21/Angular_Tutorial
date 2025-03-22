@@ -54,7 +54,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/assets/styles/global.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",

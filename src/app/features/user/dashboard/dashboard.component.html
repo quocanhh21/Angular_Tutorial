@@ -1,0 +1,41 @@
+<div class="max-w-4xl mx-auto p-6">
+    <!-- Welcome Section -->
+    <div class="bg-gradient-to-r from-blue-500 to-cyan-400 text-white p-6 rounded-lg shadow-md text-center">
+      <h2 class="text-2xl font-semibold">Welcome, {{ userName }} 👋</h2>
+      <p class="mt-2">Track your progress and improve your English skills with AI-powered insights.</p>
+    </div>
+  
+    <!-- Quick Actions -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+      <div class="bg-white p-4 rounded-lg shadow-md text-center cursor-pointer transition transform hover:scale-105"
+        (click)="startTest()">
+        <h3 class="text-lg font-semibold">📝 Take a Test</h3>
+        <p class="text-sm text-gray-600">Assess your English proficiency.</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md text-center cursor-pointer transition transform hover:scale-105"
+        (click)="viewRoadmap()">
+        <h3 class="text-lg font-semibold">📍 View Roadmap</h3>
+        <p class="text-sm text-gray-600">Personalized learning plan.</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md text-center cursor-pointer transition transform hover:scale-105"
+        (click)="continueLearning()">
+        <h3 class="text-lg font-semibold">🎮 Continue Learning</h3>
+        <p class="text-sm text-gray-600">Pick up where you left off.</p>
+      </div>
+    </div>
+  
+    <!-- Progress Visualization -->
+    <div class="mt-8 text-center">
+      <h3 class="text-lg font-semibold">Your Progress</h3>
+      <canvas id="progressChart"></canvas>
+    </div>
+  
+    <!-- AI Recommendations -->
+    <div class="bg-gray-100 p-4 rounded-lg mt-6">
+      <h3 class="text-lg font-semibold">📢 AI Learning Tips</h3>
+      <ul class="list-disc pl-5 text-gray-700">
+        <li *ngFor="let tip of aiTips">{{ tip }}</li>
+      </ul>
+    </div>
+  </div>
+  
