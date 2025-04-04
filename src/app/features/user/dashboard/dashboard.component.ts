@@ -21,6 +21,10 @@ export class DashboardComponent implements AfterViewInit {
     this.renderChart();
   }
 
+  ngOnInit() {
+    console.log('[DashboardComponent] Loaded');
+  }
+
   renderChart() {
     new Chart('progressChart', {
       type: 'line',

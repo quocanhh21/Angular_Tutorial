@@ -3,9 +3,14 @@
       <div class="avatar">
         <img src="https://i.pravatar.cc/150?img=3" alt="User Avatar">
       </div>
-      <h2 class="name">{{ user.name }}</h2>
-      <p class="email">{{ user.email }}</p>
-  
+      <!-- <h2 class="name">{{ user.name }}</h2>
+      <p class="email">{{ user.email }}</p> -->
+      
+      <div *ngIf="user$ | async as user">
+        <h2 class="name">{{user.name}}</h2>
+        <p class="email">{{user.email}}</p>
+      </div>
+
       <button
         class="edit-btn">
         <a routerLink="/profile/edit" 

@@ -6,13 +6,14 @@ import { ProfileComponent } from './features/user/profile/profile.component';
 import { EditProfileComponent } from './features/user/profile/edit-profile/edit-profile.component';
 import { TestComponent } from './features/user/test/test.component';
 import { LearningComponent } from './features/user/learning/learning.component';
+import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Routes =[
     {
         path: '',
         component: UserLayoutComponent,
         children: [
-          { path: '', component: HomeComponent },
+          { path: '', component: HomeComponent, canActivate: [authGuard] },
           { path: 'dashboard', component: DashboardComponent },        
           { path: 'tests', component: TestComponent },
           { path: 'learning', component: LearningComponent },
